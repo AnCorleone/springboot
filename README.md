@@ -16,4 +16,7 @@
     2. 在controller包中创建*Controller,在类上使用@RestController 注解, 创建方法配置请求的url和请求的类型
 ## RESTful API文档设计
 - 在pom.xml中引入所需要的依赖
-- 
+- 创建Swagger2类
+    1. 在com.zar.demo.utils.Swagger2类中配置api文档信息
+    2. 在*controller,@ApiOperation注解来给API增加说明、通过@ApiImplicitParams、@ApiImplicitParam注解来给参数增加说明。(参考[Spring Boot中使用Swagger2构建强大的RESTful API文档](http://blog.didispace.com/springbootswagger2/))
+    3. 访问[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) 可以查看文档,并且可以对接口进行测试(这里有一个问题,我在controller中注解参数类型是String,在文档页面类型异常,但是使用Idea自带的REST client是正常访问)
