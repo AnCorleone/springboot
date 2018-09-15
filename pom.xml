@@ -106,6 +106,18 @@
             <optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
         </dependency>
 
+        <!--引入Swagger2来构造RESTful API-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
