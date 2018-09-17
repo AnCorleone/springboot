@@ -23,7 +23,18 @@ spring:
       suffix: .html
   resources:
     static-locations: static
+  #    ±‡¬Î…Ë÷√
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
 
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.zar.demo.pojo
+
+#±‡¬Î…Ë÷√
+server:
+  tomcat:
+    uri-encoding: UTF-8

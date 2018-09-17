@@ -2,11 +2,7 @@ package com.zar.demo.mapper;
 
 import com.zar.demo.pojo.Category;
 import com.zar.demo.pojo.CategoryExample;
-
-import org.apache.ibatis.annotations.Mapper;
-
 import java.util.List;
-
 
 public interface CategoryMapper {
     int deleteByPrimaryKey(Integer id);
