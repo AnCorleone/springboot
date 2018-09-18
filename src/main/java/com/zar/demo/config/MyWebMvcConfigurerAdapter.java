@@ -8,6 +8,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.nio.charset.Charset;
@@ -43,5 +44,15 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter {
         // excludePathPatterns 用户排除拦截
         registry.addInterceptor(new BackInterceptor()).addPathPatterns("/admin/**").excludePathPatterns("/toLogin");
         super.addInterceptors(registry);
+    }
+
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        System.out.println("############## ");
+        System.out.println("addViewControllers ");
+//        registry.addViewController("/admin/login").setViewName("admin/login.html");
+        registry.addViewController("/site/index").setViewName("site/index.html");
+        super.addViewControllers(registry);
     }
 }

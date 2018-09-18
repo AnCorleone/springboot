@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 public class BackInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+        final String requestURI = request.getRequestURI();
+        System.out.println("##########################");
+        System.out.println(requestURI);
         boolean flag = true;
         final User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
