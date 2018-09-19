@@ -53,6 +53,7 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter {
         System.out.println("addViewControllers ");
 //        registry.addViewController("/admin/login").setViewName("admin/login.html");
         registry.addViewController("/site/index").setViewName("site/index.html");
+//        registry.addViewController("/site/test").setViewName("site/test.html");
         super.addViewControllers(registry);
     }
 }

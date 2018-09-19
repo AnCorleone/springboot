@@ -19,13 +19,18 @@ spring:
   #  资源访问路径配置
   thymeleaf:
     prefix: classpath:/templates/
-    check-template-location: true
     suffix: .html
+    check-template-location: true
     encoding: UTF-8
     mode: LEGACYHTML5
-    cache: true
-  resources:
-    static-locations: static
+    cache: false
+#  resources:
+#    chain:
+#      enabled: true
+#      strategy:
+#        content:
+#          paths: /**
+#    static-locations: classpath:/static/
   #    编码设置
   http:
     encoding:
